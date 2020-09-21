@@ -17,7 +17,7 @@ void update(int id, int l, int r, int i, int v) {
 }
 int get(int id, int l, int r, int u, int v) {
     if (v < l || u > r) return -INF;
-    if (u >= l && v <= r) return st[id];
+    if (l >= u && r <= v) return st[id];
     int mid = (l + r) / 2;
     return max(get(id * 2, l, mid, u, v), get(id * 2 + 1, mid + 1, r, u, v));
 }
