@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, x, st[10009];
+int n, x, st[40009]; // Make sure size of st > 4n
 const int INF = 1e9;
 void update(int id, int l, int r, int i, int v) {
     if (i > r || i < l) {
